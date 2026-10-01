@@ -1,0 +1,98 @@
+/* ==========================================================================
+   RESPONSIVE — Mackline & Friends Foundation
+   Breakpoints: 1200 / 1024 / 768 / 480 / 375
+   ========================================================================== */
+
+@media (max-width:1200px){
+  .work-grid{ grid-auto-rows:190px; }
+  .stats-grid{ gap:0; }
+}
+
+@media (max-width:1024px){
+  .hero-grid{ grid-template-columns:1fr; gap:40px; }
+  .hero-media{ order:-1; }
+  .hero-media .frame{ aspect-ratio:16/10; }
+  .hero-tick{ left:16px; bottom:-16px; }
+
+  .split{ grid-template-columns:1fr; gap:40px; }
+  .split-media{ order:-1; }
+  .split.media-right .img-b, .split.media-left .img-b{ display:none; }
+
+  .stats-grid{ grid-template-columns:repeat(2,1fr); }
+  .stat{ border-right:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15); padding-bottom:26px; }
+  .stat:nth-child(2n){ border-right:none; }
+
+  .work-grid{ grid-template-columns:repeat(4,1fr); grid-auto-rows:200px; }
+  .work-card.span-4{ grid-column:span 4; }
+  .work-card.span-3{ grid-column:span 4; }
+  .work-card.span-2{ grid-column:span 2; }
+
+  .stories{ grid-template-columns:repeat(2,1fr); }
+  .ways-grid{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; gap:36px; }
+  .support-panel{ grid-template-columns:1fr; gap:32px; }
+  .volunteer-band{ grid-template-columns:1fr; }
+  .volunteer-media{ min-height:260px; order:-1; }
+  .contact-grid{ grid-template-columns:1fr; }
+  .masonry{ columns:3 200px; }
+  .cta-band{ padding:48px 36px; }
+}
+
+@media (max-width:900px){
+  .nav-links{ display:none; }
+  .nav-right .btn{ display:none; }
+  .hamburger{ display:flex; }
+  .mobile-nav{ display:block; }
+}
+
+@media (max-width:768px){
+  .section-pad{ padding:64px 0; }
+  .section-pad-lg{ padding:80px 0; }
+  .section-head{ flex-direction:column; align-items:flex-start; gap:16px; margin-bottom:36px; }
+
+  .timeline{ grid-template-columns:1fr; gap:28px; }
+  .timeline::before{ display:none; }
+  .timeline-step{ padding-left:24px; border-left:2px solid var(--line); padding-bottom:4px; }
+  .timeline-step .t-num{ margin-bottom:14px; width:36px; height:36px; font-size:.85rem; margin-left:-38px; background:var(--cream); }
+
+  .work-grid{ grid-template-columns:1fr 1fr; grid-auto-rows:170px; }
+  .work-card.span-4, .work-card.span-3, .work-card.span-2{ grid-column:span 2; }
+  .work-card.tall{ grid-row:span 1; }
+
+  .stories{ grid-template-columns:1fr; }
+  .ways-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; gap:32px; }
+  .form-row{ grid-template-columns:1fr; }
+  .support-panel{ padding:36px 28px; }
+  .form-card{ padding:28px; }
+  .masonry{ columns:2 180px; }
+  .cta-band{ flex-direction:column; align-items:flex-start; text-align:left; }
+}
+
+@media (max-width:600px){
+  .stats-grid{ grid-template-columns:1fr; }
+  .stat{ border-right:none !important; border-bottom:1px solid rgba(255,255,255,.15); padding-bottom:22px; }
+  .hero-tick{ position:static; margin-top:18px; max-width:none; }
+  .volunteer-copy{ padding:44px 28px; }
+}
+
+@media (max-width:480px){
+  .container{ padding:0 20px; }
+  .nav-row{ padding-left:20px; padding-right:20px; }
+  .hero{ padding-top:32px; }
+  .work-grid{ grid-template-columns:1fr; }
+  .work-card.span-4, .work-card.span-3, .work-card.span-2{ grid-column:span 1; }
+  .masonry{ columns:1 100%; }
+  .lightbox{ padding:16px; }
+  .lightbox-prev, .lightbox-next{ width:40px; height:40px; }
+  .lightbox-close{ top:16px; right:16px; width:40px; height:40px; }
+  .lightbox-prev{ left:8px; }
+  .lightbox-next{ right:8px; }
+  .cta-band{ padding:32px 22px; border-radius:16px; }
+  .support-panel, .form-card{ padding:24px 20px; }
+}
+
+@media (max-width:375px){
+  h1{ font-size:2.1rem; }
+  .btn{ padding:13px 22px; font-size:.92rem; }
+}
